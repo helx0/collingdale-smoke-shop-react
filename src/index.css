@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #080909;
+  --color-ink-2: #101212;
+  --color-ink-3: #171a1a;
+  --color-gold: #d9ad62;
+  --color-gold-bright: #f0c978;
+  --color-cream: #f4efe5;
+  --color-muted: #9b9c98;
+}
+
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color-scheme: dark; background: #080909; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #080909; color: #f4efe5; }
+
+/* Arabic (RTL) typography */
+[dir="rtl"] body, [dir="rtl"] { font-family: "Tajawal", Inter, ui-sans-serif, system-ui, sans-serif; }
+[dir="rtl"] .font-serif { font-family: "Tajawal", ui-serif, Georgia, serif; font-weight: 700; }
+[dir="rtl"] .tracking-\[\.38em\], [dir="rtl"] .tracking-\[\.34em\], [dir="rtl"] .tracking-\[\.32em\], [dir="rtl"] .tracking-\[\.24em\], [dir="rtl"] .tracking-\[\.2em\], [dir="rtl"] .tracking-\[\.18em\], [dir="rtl"] .tracking-\[\.16em\], [dir="rtl"] .tracking-\[\.12em\] { letter-spacing: 0; }
+
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: rgba(217,173,98,.25); color: #fff; }
+
+.luxury-grid { background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 48px 48px; }
+.gold-line { background: linear-gradient(90deg, transparent, rgba(217,173,98,.75), transparent); height: 1px; }
+.glow { box-shadow: 0 0 0 1px rgba(217,173,98,.12), 0 20px 80px rgba(217,173,98,.08); }
+.smoke { background: radial-gradient(ellipse at 55% 30%, rgba(255,255,255,.08), transparent 40%), radial-gradient(ellipse at 70% 55%, rgba(217,173,98,.12), transparent 38%), radial-gradient(ellipse at 25% 75%, rgba(255,255,255,.045), transparent 32%); filter: blur(2px); }
+.hero-vignette { background: radial-gradient(circle at 68% 38%, transparent 0 16%, rgba(8,9,9,.24) 38%, rgba(8,9,9,.9) 86%); }
+.noise::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .045; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E"); }
